@@ -1,0 +1,212 @@
+/* Overview */
+body {
+    background-color: #332c50;
+    color: #e2f3e4;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+div {
+    margin: 10px;
+}
+
+.title {
+    font-size: 16pt;
+}
+
+/* .fixed {
+    top: 0;
+    left: 0;
+    max-width: 50%;
+    position: fixed;
+    
+} */
+
+.description {
+    line-height: 18pt;
+    font-size: 10pt;
+}
+
+.number-display {
+    color: #94e344;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    align-content: center;
+}
+
+
+input {
+    background-color: #332c50;
+    border: 2px dotted #94e344;
+    border-radius: 4px;
+    max-width: 40%;
+    min-width: 30%;
+    height: 36px;
+    color: #e2f3e4;
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 10px;
+}
+
+input:focus-visible { outline: none }
+
+
+/* Controls design */
+.controls {
+    justify-content: center;
+}
+.controls-row {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0;
+}
+
+.controls button {
+    background-color: #94e344;
+    color: #46878f;
+    border-style: dotted;
+    border-radius: 4px;
+    border-color: #332c50;
+    font-family: 'Press Start 2P', cursive;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.controls button:active {
+    margin-top: 5px;
+    background-color: #46878f;
+    color: #332c50;
+}
+
+button {
+    position: relative;
+    background-color: #94e344;
+    color: #46878f;
+    border-style: dotted;
+    border-radius: 4px;
+    border-color: #332c50;
+    font-family: 'Press Start 2P', cursive;
+    height: 36px;
+    width: -webkit-fill-available;
+}
+
+button:active {
+    margin-top: 5px;
+    background-color: #46878f;
+    color: #332c50;
+    margin-bottom: -5px;
+}
+
+.generic-btn {
+    width: 60px;
+}
+
+
+/* Player styling */
+.player {
+    background-color: #94e344 !important;
+    border: 2px dotted #332c50 !important;
+    margin: -1px !important;
+    position: relative;
+}
+
+.player:active {
+    margin-top: 4px !important;
+    margin-bottom: -6px !important;
+    background-color: #46878f !important;
+    color: #94e344 !important;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+/* Map display */
+.display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.display-col {
+    margin-top: 4px;
+}
+
+.grid {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100px;
+}
+
+
+.row {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+
+.food-tile {
+    /* background-color: #46878f !important; */
+    color: #94e344 !important;
+}
+
+.tile {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #332c50;
+    color: #46878f;
+    font-weight: 700;
+    height: 60px;
+    width: 60px;
+    border: 1px solid #94e344;
+    margin: 0px;
+    
+}

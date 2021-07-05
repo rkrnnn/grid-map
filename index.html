@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Walk 25 05 2021
+        </title>
+    </head>
+    <body>
+        <div class="display">
+            <div class="display-col fixed" style="max-width: 50%;">
+                <div class="title">
+                    <span>
+                        Walking through a grid
+                    </span>
+                </div>
+                <br>
+                <div class="description">
+                    This is your pet. You can pet him, but he might not like it!<br><br>
+                    Use the <span class="number-display">buttons</span>, <span class="number-display">your keyboard arrows</span> or <span class="number-display">click on the grid</span> to move him.<br><br>
+                </div>
+                <div class="input-group">
+                    <input id="new-width" class="input" placeholder="New grid width"> x </input><input id="new-height" class="input" placeholder="New grid height"></input><button class="generic-btn" onclick="updateWidthHeight()">Go</button></button>
+                </div>
+                <div class="description">
+                    He lives on a map with <span class="number-display" id="tiles-number-display"></span> tiles.<br>
+                    He sees <span class="number-display" id="player-score-display"></span> flowers.<br>
+                    <span class="number-display" id="no-food-msg" style="display: none">Your bugger has eaten everything!</span>
+                </div>
+            </div>
+            <div class="display-col" style="width: 70%;">
+                <div class="grid map">
+                    ⬤◯◯◯◯◯◯◯
+                </div>
+                <div class="controls">
+                    <div class="controls-row">
+                        <button class="btn-control" onclick="movePlayerCall(0,-1)">^</button>
+                    </div>
+                    <div class="controls-row">
+                        <button class="btn-control" onclick="movePlayerCall(-1,0)"><</button>
+                        <button class="btn-control" onclick="movePlayerCall(0,1)">V</button>
+                        <button class="btn-control" onclick="movePlayerCall(1,0)">></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/walk_obj.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
